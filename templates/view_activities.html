@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Activities</title>
+</head>
+
+<body>
+
+<h2>Student Activities</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Student Name</th>
+        <th>Activity Name</th>
+        <th>Date</th>
+    </tr>
+    {% for activity in activities %}
+    <tr>
+        <td>{{activity[0]}}</td>
+        <td>{{activity[1]}}</td>
+        <td>{{activity[2]}}</td>
+        <td>{{activity[3]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/dashboard">Back</a>
+
+</body>
+</html>

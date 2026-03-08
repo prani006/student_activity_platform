@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Activity</title>
+</head>
+
+<body>
+
+<h2>Upload Student Activity</h2>
+
+<form action="/upload_activity" method="POST">
+
+    <label>Student</label>
+    <select name="student_id">
+        {% for student in students %}
+        <option value="{{student[0]}}">{{student[1]}}</option>
+        {% endfor %}
+    </select>
+
+    <br><br>
+
+    Activity Name:
+    <input type="text" name="activity_name" required>
+
+    <br><br>
+
+    Activity Date:
+    <input type="date" name="activity_date" required>
+
+    <br><br>
+
+    <button type="submit">Upload Activity</button>
+
+</form>
+
+<br>
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>
