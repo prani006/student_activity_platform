@@ -2,18 +2,66 @@
 <html>
 <head>
     <title>Admin Login</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
 </head>
+
 <body>
 
-<h2>Admin Login</h2>
+<form action="/login" method="POST">
 
-<form action="/login" method="post">
+    <h2>Admin Login</h2>
 
-    Username:<br>
-    <input type="text" name="username"><br><br>
+    <label>Username</label>
+    <input type="text" name="username" required>
 
-    Password:<br>
-    <input type="password" name="password"><br><br>
+    <label>Password</label>
+    <input type="password" name="password" required>
 
     <button type="submit">Login</button>
 
@@ -21,3 +69,4 @@
 
 </body>
 </html>
+
